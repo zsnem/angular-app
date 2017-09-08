@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-sm-6 col-xs-12 pull-right">
+			<label for="approval">Set Approvals</label>
+			<select name="approval" id="approval" ngModel>
+				<option *ngFor="let option of workFlowOptions" [value]="option.value">
+					{{option.display}}
+				</option>
+			</select>
+		</div>
+	</div>
+<br>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="center">
+				<button class="btn btn-primary btn-lg" routerLink="/file-upload">File input</button>
+			</div>
+		</div>
+
+
+		<div class="col-md-6">
+			<div class="center">
+				<button class="btn btn-primary btn-lg" routerLink="/manual-upload">Manual input</button>
+			</div>
+		</div>
+	</div>
+</div>

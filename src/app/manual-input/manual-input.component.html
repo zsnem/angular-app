@@ -1,0 +1,45 @@
+<div class="container">
+	<form (ngSubmit)="manualInputForm(form)" #form="ngForm">
+		<div class="form-group" >
+			<label for="gid">Enter GeneralID</label> <input name="gid" type="type" class="form-control" ngModel>
+
+			<label for="gid">Enter RequestID</label> <input name="rid" type="type" class="form-control" ngModel>
+
+			<label for="name">Enter Name</label> <input name="name" type="type" class="form-control"ngModel>
+
+			<label for="location">Enter Location</label> <input name="location" type="type" class="form-control" ngModel>
+
+			<label for="date">Enter Date (dd/mm/yyyy)</label> <input name="date" type="date" class="form-control" ngModel>
+
+			<label for="purpose">Enter Purpose</label> <input name="purpose" type="type" class="form-control" ngModel>
+		</div>
+		<button class="btn btn-default" type="submit"> Submit </button>
+	</form>
+	<br>
+	<div class="container">
+
+		<table border="1"> 
+
+			<tr>
+				<th style="padding:1px; text-align:center">GeneralID</th>
+				<th style="padding:1px; text-align:center">RequestID</th>
+				<th style="padding:1px; text-align:center">Name</th>
+				<th style="padding:1px; text-align:center">Location</th>
+				<th style="padding:1px; text-align:center">Date</th>
+				<th style="padding:1px; text-align:center">Purpose</th>
+			</tr>
+
+					<tr *ngFor="let row of manualInput">
+						<td style="padding:1px; text-align:center"> {{ row.gid }}	</td>
+						<td style="padding:1px; text-align:center"> {{ row.rid }} </td>
+						<td style="padding:1px; text-align:center"> {{ row.name }}	</td>
+						<td style="padding:1px; text-align:center"> {{ row.location }}	</td>
+						<td style="padding:1px; text-align:center"> {{ row.date }}	</td>
+						<td style="padding:1px; text-align:center"> {{ row.purpose }} </td>
+					</tr>
+
+		</table>
+
+	 </div>
+</div>
+
